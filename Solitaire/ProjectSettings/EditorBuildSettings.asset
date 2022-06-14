@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d1b5abdfcde30d344bd8a03d16d8a3e8
   - enabled: 1
+    path: Assets/Scenes/UserMenu.unity
+    guid: dc803f1d88abe084daed5b4516f82906
+  - enabled: 1
     path: Assets/Scenes/SolitaireGame.unity
     guid: 7aee90f4bfc1e894d9eb9e82416162d0
   m_configObjects: {}
