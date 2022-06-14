@@ -1,7 +1,10 @@
+using System.Globalization;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SetNameController : MonoBehaviour
@@ -18,4 +21,5 @@ public class SetNameController : MonoBehaviour
 
         user_name.text = "";
     }
+
 }
