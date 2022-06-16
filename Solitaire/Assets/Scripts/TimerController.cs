@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +10,7 @@ public class TimerController : MonoBehaviour
 
     public Text timeCounter;
 
-    private TimeSpan timePlaying;
+    public TimeSpan timePlaying;
     private bool timerGoing;
 
     private float elapsedTime;
@@ -24,6 +24,7 @@ public class TimerController : MonoBehaviour
     {
         timeCounter.text = "Time: 00:00.00";
         timerGoing = false;
+        BeginTimer();
     }
 
     public void BeginTimer()
@@ -36,6 +37,7 @@ public class TimerController : MonoBehaviour
 
     public void EndTimer()
     {
+        timeCounter.text = "Time: 00:00.00";
         timerGoing = false;
     }
 

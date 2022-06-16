@@ -35,6 +35,8 @@ public class UIButtons : MonoBehaviour
         ClearTopValues();
         // deal new cards
         FindObjectOfType<Solitaire>().PlayCards();
+        TimerController.instance.EndTimer();
+        TimerController.instance.BeginTimer();
     }
 
     void ClearTopValues()
