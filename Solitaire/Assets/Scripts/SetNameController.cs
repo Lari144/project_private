@@ -9,17 +9,13 @@ using TMPro;
 
 public class SetNameController : MonoBehaviour
 {
+    public static SetNameController scene;
     public TextMeshProUGUI user_name;
     public TMP_InputField user_inputField;
 
-    public void SetName(){
+    public void SetName()
+    {
 
-        user_name.text = "Welcome " + user_inputField.text;
+        user_name.text = "Welcome " + user_inputField.text + " !";
     }
-
-    public void ResetName(){
-
-        user_name.text = "";
-    }
-
 }
