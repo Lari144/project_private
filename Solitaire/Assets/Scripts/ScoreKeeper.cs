@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Numerics;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Data;
@@ -35,12 +36,10 @@ public class ScoreKeeper : MonoBehaviour
         }
         if (i >= 52)
         {
-            SaveGameScore(true);
             return true;
         }
         else
         {
-            SaveGameScore(false);
             return false;
         }
 
@@ -50,6 +49,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         highScorePanel.SetActive(true);
         print("You have won!");
+        SaveGameScore(true);
     }
 
     private void SaveGameScore(bool hasWon) 

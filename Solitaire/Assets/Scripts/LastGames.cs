@@ -8,7 +8,7 @@ using TMPro;
 
 public class LastGames : MonoBehaviour
 {
-    private int templateHeight = 40;
+    private int templateHeight = 60;
 
     private void Awake()
     {
@@ -31,7 +31,7 @@ public class LastGames : MonoBehaviour
     {
         var recordRow = Instantiate(template, container);
         var recordRowTransform = recordRow.GetComponent<RectTransform>();
-        recordRowTransform.anchoredPosition = new Vector2(0, -templateHeight * index +1);
+        recordRowTransform.anchoredPosition = new Vector2(0, -templateHeight * index + 1);
         recordRowTransform.gameObject.SetActive(true);
         
         return recordRowTransform;
@@ -47,7 +47,7 @@ public class LastGames : MonoBehaviour
         dbconn.Open();
 
         IDbCommand dbcmd = dbconn.CreateCommand();
-        string sqlQuery = $"Select * from users ORDER BY Time desc";
+        string sqlQuery = $"Select * from users ORDER BY Time desc LIMIT 8";
         dbcmd.CommandText = sqlQuery;
 		var reader = dbcmd.ExecuteReader();
         while (reader.Read()) {
@@ -57,7 +57,7 @@ public class LastGames : MonoBehaviour
                 { 
                     Name = reader[1].ToString(),
                     HasWon = Int32.Parse(reader[2].ToString()) == 1 ? true : false,
-                    GameTime = TimeSpan.FromSeconds(Double.Parse(reader[3].ToString())),
+                    GameTime = TimeSpan.FromMinutes(Double.Parse(reader[3].ToString())),
                     Time = DateTimeOffset.FromUnixTimeSeconds(Int64.Parse(reader[4].ToString())).DateTime
                 });
         }
