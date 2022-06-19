@@ -72,6 +72,12 @@ Im Scene UserMenu kann man durch einen Input seinen Username eingeben. Nach der 
 ### Menu Erweiterung
 Ich habe noch zusätlich in jeder Scene ein Back Button erstellt, damit man bequem die Scenes wechseln kann.
 
+-------
+### 16.06
+
+#### 12:30 - 18:00
+### Datenbank
+Mein Spiel mit einer Sqlite Datenbank verbunden - neuer Plugins Folder, mit libraries von Sqlite und Skripte. Nun werden die letzten 8 Gewonnenen Spiele in Last Games angezeigt. Es werden Username, Played Time und Time, wann es gespielen worden ist, gespeichert.
 
 
 
